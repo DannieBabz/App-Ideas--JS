@@ -1,1 +1,1 @@
-#App Ideas for JavaScript
+# App Ideas for JavaScript

@@ -54,7 +54,7 @@ input::-webkit-inner-spin-button {
 }
 .clear:hover{
     background-color:rgb(53, 5, 101);
-    transition: 1s;
+    transition: 0.5s;
 }
 .back{
     width: 100px;
@@ -72,6 +72,32 @@ input::-webkit-inner-spin-button {
     border-radius: 100px;
     border: none;
 }
+.num:hover, .decimal:hover{
+    color: white;
+    background-color: rgb(102, 48, 153);
+    transition: 0.5s;
+
+}
 .operator{
-    background-color:rgb(178, 147, 210);
+    background-color:rgb(178, 124, 232);
+    color: white;
+}
+
+.operator:hover{
+    background-color:rgb(128, 63, 192);
+    color: white;
+    transition: 0.5s;
+}
+.back:hover{
+    background-color:rgb(128, 63, 192);
+    color: white;
+    transition: 0.5s;
+}
+footer{
+    font-size: 20px;
+    margin-top: -25px;
+}
+a{
+    text-decoration: none;
+    color: blueviolet;
 }

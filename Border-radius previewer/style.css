@@ -39,7 +39,7 @@ input{
     color: white;
     font-size: 20px;
     padding: 10px;
-
+  
 }
 button{
     background-color: black;
@@ -51,6 +51,7 @@ button{
     margin-top: auto;
     border: none;
     font-size: 20px;
+   
 }
 button:hover{
   transition: 1s;
@@ -58,9 +59,11 @@ button:hover{
   color: #1D2671;
 }
 footer{
-   margin: -25px;
-   color: white;
+    font-size: 20px;
+    margin-top: 30px;
+    color: black;
 }
 a{
-   color: black;
+    text-decoration: none;
+    color: white;
 }

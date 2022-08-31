@@ -16,10 +16,11 @@ copy.addEventListener('click', () => {
     let copyInput = document.getElementById('result');
     copyInput.select();
 
-    navigator.clipboard.writeText(copyInput.value);
-
-
+        navigator.clipboard.writeText(copyInput.value);
+        let copyTime = setTimeout(() => {
+            
+            copy.innerHTML = "Copied!";
+            
+        }, 1000);
+        
 })
-
-
-

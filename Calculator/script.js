@@ -1,82 +1,178 @@
 
-const calculator = document.querySelector('.container');
-const keys = calculator.querySelectorAll('.num');
+const keys = document.querySelector('.keys');
 const res = document.getElementById('result');
 let operators = document.querySelectorAll('.operator');
-res.value = "";
+// let equals = document.querySelector('.equals');
+let decimal = document.querySelector('.decimal');
+let clearScreen = document.querySelector('.clear');
+let backSpace = document.querySelector('.back');
+res.value = "0"; 
+var resultNum = "";
+var waitingForSecondNum = "";
+var previousNum = "";
+var currentNum = "";
+var operator = "";
 
 
+keys.addEventListener('click', (e) => {
+    const { target } = e;
 
-keys.forEach(key => {
-        key.addEventListener('click', () => {
-        res.value += key.value;
-        firstNumber = parseInt(res.value);
-        })
+    if (!target.matches('button')){
+        return;
+    }
+    if (target.classList.contains('operator')){
+        setOperator(target.value);
+        return;
+    }
+    if (target.classList.contains('decimal')){
+        setDec(target.value);
+        return;
+    }
+    if (target.classList.contains('clear')){
+        clearNum(target.value);
+        return;
+    }
+    if (target.classList.contains('num')){
+        setNum(target.value);
+        return;
+    }
+    if (target.classList.contains('back')){
+        deleteNum(target.value);
+        return;
+    }
+
 })
 
-res.value = "";
 
-operators.forEach(operator => {
-    operator.addEventListener('click', () => {
-        res.value += operator.value;
+function setNum(num) {
+    if (waitingForSecondNum === true) {
+        res.value = num;
+        waitingForSecondNum =false;
+        
+    } else if (res.value === "0") {
+        res.value = num;
+        
+    } else {
+        res.value += num;
+    }
+}
 
-        switch (operators) {
-            case '+':
-                return firstNumber + secondNumber
-                
-            case '-':
-                res.value += firstNumber - secondNumber
-                break;
-            case '*':
-                res.value += firstNumber * secondNumber
-                break;
-            case '/':
-                res.value += firstNumber / secondNumber
-                break;
-            case '=':
-                res.value;
+function setDec(decimal) {
+    if (!res.value.includes(decimal)) {
+        res.value += decimal;
+    }
+    
+}
 
-        }
-    })
-}) 
+function setOperator(operators) {
+    const inputVal = parseFloat(res.value);
+
+    if (currentNum === "" && !isNaN(inputVal)){
+        currentNum = inputVal;
+    }else if(operator){
+        resultNum = calculate(currentNum, inputVal, operator)
+        
+        res.value = String(resultNum);
+        currentNum = resultNum;
+
+    }
+    waitingForSecondNum = true;
+    operator = operators;
+
+}
+
+function calculate(currentNum, previousNum, operator) {
+    switch (operator) {
+        case '+':
+            return currentNum + previousNum;
+            
+        case '-':
+            return currentNum - previousNum;
+            
+        case '*':
+            return currentNum * previousNum;
+            
+        case '/':
+            return currentNum / previousNum;
+            
+    
+        default:
+            return resultNum;         
+    }
+}
 
 
-
-
-
-// function operation(firstNumber, operator, secondNumber) {
-//     keys.forEach(key => {
-//         // first number
-//         let firstNumber = key.addEventListener('click', () => {
-//            res.value += key.value;
-//         });
-//     })
-//     // operator
-//     keys.forEach(key => {
-//     let firstNumber = key.addEventListener('click', () => {
-//        res.value += key.value;
-//     });
-// })
-
-
-//     // second number
+function deleteNum(backSpace) {
+    if (res.value) {
+        res.value = res.value.slice(0, -1);
+    }
+    else {
+        res.value = "0";
+        
+    }
 
     
-// }
+}
 
-// function operation(firstNumber, operator, secondNumber) {
+function clearNum(clear) {
+    res.value = "0";
+    currentNum = "";
+    waitingForSecondNum = "";
+    resultNum = "";
+}
 
 
-            
+
+
+    
+    
+
+
+
+    // key.addEventListener('click', () => {
+    //     previousNum = currentNum;
+    //     currentNum = "";
+    //     res.value = previousNum;
+    //     console.log(previousNum);
         
-//     })
+    // })
 
 
-//         secondNumber = key.addEventListener('click', () => {
-//             res.value += key.value;
-            
 
-//         })
+
+// compute() {
+//     let computation
+//     const prev = parseFloat(this.previousOperand)
+//     const current = parseFloat(this.currentOperand)
+//     if (isNaN(prev) || isNaN(current)) return
+//     switch (this.operation) {
+//       case '+':
+//         computation = prev + current
+//         break
+//       case '-':
+//         computation = prev - current
+//         break
+//       case '*':
+//         computation = prev * current
+//         break
+//       case '÷':
+//         computation = prev / current
+//         break
+//       default:
+//         return
 //     }
-//     )}
+//     this.currentOperand = computation
+//     this.operation = undefined
+//     this.previousOperand = ''
+//   }
+
+// clearScreen.addEventListener('click', () => {
+//     currentNum = "";
+//     previousNum = "";
+//     res.value = "0";
+// })
+
+// if (res.value) {
+    // backspace res.innerText = res.innerText.slice(0, -1);
+// }
 

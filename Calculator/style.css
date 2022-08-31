@@ -44,7 +44,7 @@ input::-webkit-inner-spin-button {
     
 }
 .clear{
-    width: 300px;
+    width: 300px !important;
     height: 70px;
     font-size: 40px;
     border-radius: 100px;
@@ -71,4 +71,7 @@ input::-webkit-inner-spin-button {
     font-size: 40px;
     border-radius: 100px;
     border: none;
+}
+.operator{
+    background-color:rgb(178, 147, 210);
 }

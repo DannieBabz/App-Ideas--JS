@@ -57,9 +57,10 @@ button:hover{
   background-color: white;
   color: #1D2671;
 }
-
-
-
-
-
-
+footer{
+   margin: -25px;
+   color: white;
+}
+a{
+   color: black;
+}

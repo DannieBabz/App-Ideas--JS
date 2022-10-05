@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,38 @@
     <title>Countdown Timer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="box">
-       <div class="timer days">
-
-        <hr>
-        <span>Days</span>
-       </div> 
-       <div class="timer hours">
-        
-        <hr>
-        <span>Hours</span>
-       </div>
-       <div class="timer minutes">
-
-        <hr>
-        <span>Minutes</span>
-       </div>
-       <div class="timer seconds">
-
-        <hr>
-        <span>Seconds</span>
-       </div>
+        <div class="timer">
+            <span class="days"></span>
+            <hr>
+            <span>Days</span>
+        </div>
+        <div class="colon">:</div>
+        <div class="timer">
+            <span class="hours"></span>
+            <hr>
+            <span>Hours</span>
+        </div>
+        <div class="colon">:</div>
+        <div class="timer">
+            <span class="minutes"></span>
+            <hr>
+            <span>Minutes</span>
+        </div>
+        <div class="colon">:</div>
+        <div class="timer">
+            <span class="seconds"></span>
+            <hr>
+            <span>Seconds</span>
+        </div>
     </div>
     <label for="event-name" id="event">Event:</label>
     <input type="text" class="event-name">
-    <input type="date" class="event-end">
-    <input type="button" class="button" value="Start">
+    <input type="date" class="event-end" id="date" value="">
+    <input type="button" class="button" id="btn" value="Start">
+    <script src="script.js"></script>
 </body>
+
 </html>

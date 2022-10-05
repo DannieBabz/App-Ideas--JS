@@ -32,8 +32,20 @@ label{
     color: white;
 }
 .timer{
-    width: 130px;
-    /* font-size: 30px; */
+    width: 100px;
+    font-size: 25px !important;
+    
+}
+.days, .hours, .minutes, .seconds{
+    font-size: 40px;
+    
+}
+hr{
+    margin: 30px;
+}
+.colon{
+    font-size: 70px;
+    margin-bottom: 70px;
 }
 .button{
     width: 120px;

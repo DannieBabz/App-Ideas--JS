@@ -1,53 +1,54 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-body{
-    text-align: center;
-    margin-top: auto;
-    background: black;
-    font-size: 30px;
+body {
+	text-align: center;
+	/* margin-top: auto; */
+	background: black;
+	font-size: 30px;
 }
-.box{
-    display: flex;
-    margin-top: 15em;
-    margin-bottom: 5em;
+.box {
+	display: flex;
+	margin-top: 10em;
+	margin-bottom: 5em;
 }
-div{
-    justify-content: center;
-    margin: auto;
-    color: white;
+div {
+	justify-content: center;
+	margin: auto;
+	color: white;
 }
-input{
-    display: flex;
-    margin: auto;
-    margin-top: 50px;
-    color: black;
-    width: 300px;
-    height: 50px;
-    font-size: 20px;
+input {
+	display: flex;
+	margin: auto;
+	margin-top: 50px;
+	color: black;
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
 }
-label{
-    color: white;
+label {
+	color: white;
 }
-.timer{
-    width: 100px;
-    font-size: 25px !important;
-    
+.timer {
+	width: 100px;
+	font-size: 25px !important;
 }
-.days, .hours, .minutes, .seconds{
-    font-size: 40px;
-    
+.days,
+.hours,
+.minutes,
+.seconds {
+	font-size: 40px;
 }
-hr{
-    margin: 30px;
+hr {
+	margin: 30px;
 }
-.colon{
-    font-size: 70px;
-    margin-bottom: 70px;
+.colon {
+	font-size: 70px;
+	margin-bottom: 70px;
 }
-.button{
-    width: 120px;
-    display: inline;
+.button {
+	width: 120px;
+	display: inline;
 }

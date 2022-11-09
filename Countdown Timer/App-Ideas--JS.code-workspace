@@ -1,11 +1,10 @@
 {
 	"folders": [
 		{
-			"name": "App-Ideas--JS",
 			"path": ".."
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Border-radius previewer"
+		"liveServer.settings.port": 5501
 	}
 }

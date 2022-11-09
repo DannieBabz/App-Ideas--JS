@@ -4,21 +4,15 @@ let day = document.querySelector(".days");
 let hour = document.querySelector(".hours");
 let minute = document.querySelector(".minutes");
 let second = document.querySelector(".seconds");
-day.innerHTML = 00;
-hour.innerHTML = 00;
-minute.innerHTML = 00;
-second.innerHTML = 00;
+day.innerHTML = "00";
+hour.innerHTML = "00";
+minute.innerHTML = "00";
+second.innerHTML = "00";
+
 //Onchange get the value of input
 //Perform the operation to subtract todays date and the set date
 //Input the individual values on each corresponding html elements
-// if (
-// 	day.innerHTML.length < 1 ||
-// 	hour.innerHTML.length < 1 ||
-// 	minute.innerHTML.length < 1 ||
-// 	second.innerHTML.length < 1
-// ) {
-// 	0 + day.innerHTML;
-// }
+
 dateVal.addEventListener("change", count);
 function count() {
 	let countdown = setInterval(
@@ -35,10 +29,10 @@ function count() {
 				minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
 				seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-			day.innerHTML += days;
-			hour.innerHTML += hours;
-			minute.innerHTML += minutes;
-			second.innerHTML += seconds;
+			day.innerHTML = days;
+			hour.innerHTML = hours;
+			minute.innerHTML = minutes;
+			second.innerHTML = seconds;
 
 			if (distance < 0) {
 				day.innerHTML = 00;
